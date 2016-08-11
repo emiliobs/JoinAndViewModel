@@ -1,0 +1,27 @@
+﻿@model IEnumerable<JoinAndViewModel.Models.StudentViewModel>
+@{
+    ViewBag.Title = "Student View Model.";
+}
+
+<h2>Student View Model.</h2>
+
+<table class="table table-striped">
+ <tr>
+     <td>Student Name</td>
+     <td>Student Stream</td>
+     <td>Favourate Fruite</td>
+     <td>Hobby</td>
+ </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.StudentVM.Name</td>
+            <td>@item.StudentVM.Stream</td>
+            <td>@item.StudentAdditionalInfoVM.FavourateFruit</td>
+            <td>@item.StudentAdditionalInfoVM.Hobby</td>
+        </tr>
+    }
+
+</table>
+
